@@ -1,0 +1,21 @@
+get_pokemon.settings:
+  path: 'admin/config/get-pokemon/settings'
+  defaults:
+    _form: '\Drupal\get_pokemon\Form\AdminGetPokemonForm'
+  requirements:
+    _permission: 'administer pokemon'
+
+get_pokemon.list:
+  path: 'get-pokemon'
+  defaults:
+    _form: '\Drupal\get_pokemon\Form\ListPokemonForm'
+  requirements:
+    _permission: 'administer pokemon'
+
+get_pokemon.remove:
+  path: 'remove-pokemon/{id}'
+  defaults:
+    _controller: '\Drupal\get_pokemon\Controller\RemovePokemonCtl::remove'
+    id: null
+  requirements:
+    _permission: 'administer pokemon'

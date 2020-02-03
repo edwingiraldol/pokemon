@@ -1,0 +1,12 @@
+get_pokemon.admin_config_get_pokemon:
+  title: 'pokemon config'
+  description: 'administer pokemon'
+  parent: system.admin_config
+  route_name: get_pokemon.settings
+  base_route: get_pokemon.settings
+
+get_pokemon.settings:
+  title: 'Admin pokemon'
+  description: 'admin pokemon'
+  parent: get_pokemon.admin_config_get_pokemon
+  route_name: get_pokemon.settings

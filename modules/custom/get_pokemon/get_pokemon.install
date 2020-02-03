@@ -1,0 +1,64 @@
+<?php
+
+/**
+ * Implements hook_schema().
+ */
+function tigo_sim_card_preloaded_schema()
+{
+    $schema = [];
+    $schema['pokemon'] = get_table_pokemon();
+
+    return $schema;
+}
+
+
+/**
+ * Return schema for create pokemon table
+ *
+ * @return array
+ */
+function get_table_pokemon()
+{
+    return [
+        'fields' => [
+            'id' => [
+                'type' => 'int',
+                'not null' => TRUE,
+                'description' => 'identifier for table'
+            ],
+            'name' => [
+                'type' => 'varchar',
+                'length' => '255',
+                'description' => 'name pokemon'
+            ],
+            'image' => [
+                'type' => 'varchar',
+                'length' => '255',
+                'description' => 'image path pokemon'
+            ],
+            'base_experience' => [
+                'type' => 'int',
+                'description' => 'base_experience pokemon'
+            ],
+            'stats' => [
+                'type' => 'text',
+                'mysql_type' => 'longtext',
+                'not null' => TRUE,
+                'description' => 'list stats pokemon'
+            ],
+            'ability' => [
+                'type' => 'text',
+                'mysql_type' => 'longtext',
+                'not null' => TRUE,
+                'description' => 'list ability pokemon'
+            ],
+            'height' => [
+                'type' => 'int',
+                'description' => 'height'
+            ],
+        ],
+        'primary key' => [
+            'id'
+        ]
+    ];
+}

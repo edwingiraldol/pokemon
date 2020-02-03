@@ -1,0 +1,5 @@
+name: Get Pokemons
+type: module
+description: Get favorities pokemons
+core: 8.x
+package: custom

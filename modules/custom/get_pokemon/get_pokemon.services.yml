@@ -1,0 +1,3 @@
+services:
+  get_pokemon.get_all_pokemon:
+    class: Drupal\get_pokemon\Controller\GetAllPokemonService
